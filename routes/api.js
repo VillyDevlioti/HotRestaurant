@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
+var table = require('tables');
+var waitlist = require('waitlist');
+var reservations = require('reservations');
+
 
 /* GET /api/tables listing. */
 
@@ -18,10 +22,20 @@ app.post("/reservation", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
   var newReservation = req.body;
-
   console.log(newReservation);
-
+  reservations.push(newReservation);
   res.json(newReservation);
+
+  //adding logic to handle reservations
+  for (var i=0; i<reservations.length; i++) {
+    if (i<5) {
+      tables.push(reservations[i]);
+    
+  }
+  else {
+    waitlist.push(reservations[i]);
+  }
+
 });
 
 
