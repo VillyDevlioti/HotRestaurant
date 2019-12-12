@@ -1,13 +1,52 @@
 <html>
 
 <head>
-  <title>Express</title>
+  <title>Reservation</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-  <h1>Reservation Form</h1>
-  <p>Welcome to Express</p>
+
+  <div class="container">
+    <div class="jumbotron" style="text-align:center;">
+      <h2 class="display-4">Hot Restaurant</h2>
+      <h3 class="lead">Make your reservation</h3>
+      <hr class="my-4">
+      <a class="btn btn-primary btn-lg" href="/HotRestaurant/public/tables.html" role="button">View Tables</a>
+      <a class="btn btn-primary btn-lg" href="/HotRestaurant/public/index.html" role="button">Home</a>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        Make a reservation
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput">
+          </div>
+          <div class="form-group">
+            <label for="phoneInput">Phone Number</label>
+            <input type="text" class="form-control" id="phoneInput">
+          </div>
+          <div class="form-group">
+              <label for="emailInput">Email address</label>
+              <input type="email" class="form-control" id="emailInput">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+
 </body>
 
 </html>
