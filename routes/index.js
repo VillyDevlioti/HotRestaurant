@@ -9,12 +9,12 @@ router.get('/', function(req, res, next) {
 
 /* GET tables page. */
 router.get('/tables', function(req, res, next) {
-  res.render(path.join(__dirname, "tables.html"));
+  res.sendFile(path.join(__dirname, "../public/tables.html"));
 });
 
 /* GET reservation page. */
 router.get('/reservation', function(req, res, next) {
-  res.render(path.join(__dirname, "reservation.html"));
+  res.sendFile(path.join(__dirname, "../public/reservation.html"));
 });
 
 
