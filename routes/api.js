@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
-var table = require('tables');
-var waitlist = require('waitlist');
-var reservations = require('reservations');
+var data = require('data');
+var tables = data.tables;
+var waitlist = data.waitlist;
+var reservations = data.reservations;
 
 
 /* GET /api/tables listing. */
