@@ -8,17 +8,17 @@ var reservations = require('reservations');
 
 /* GET /api/tables listing. */
 
-router.get('/tables', function(req, res, next) {
+router.get('/tables', function (req, res, next) {
   res.send('respond with table data');
 });
 
 /* POST /api/reservation data. */
 
-router.post('/reservation', function(req, res, next) {
+router.post('/reservation', function (req, res, next) {
   res.send('post reservation data');
 });
 
-app.post("/reservation", function(req, res) {
+app.post("/reservation", function (req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
   var newReservation = req.body;
@@ -27,13 +27,15 @@ app.post("/reservation", function(req, res) {
   res.json(newReservation);
 
   //adding logic to handle reservations
-  for (var i=0; i<reservations.length; i++) {
-    if (i<5) {
+  for (var i = 0; i < reservations.length; i++) {
+    if (i < 5) {
       tables.push(reservations[i]);
-    
-  }
-  else {
-    waitlist.push(reservations[i]);
+
+    }
+    else {
+      waitlist.push(reservations[i]);
+    }
+
   }
 
 });
